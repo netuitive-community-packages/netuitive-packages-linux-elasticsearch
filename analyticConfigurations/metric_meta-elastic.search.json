@@ -1,0 +1,79 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Elastic Search",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "SERVER",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "elasticsearch.disk.*",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.cache.filter.evictions",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.network.*",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.jvm.gc.*",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.transport.*",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.thread_pool.*.completed",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.thread_pool.*.rejected",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "elasticsearch.indices.*",
+      "properties" : {
+        "statistic" : "MAX",
+        "type" : "COUNTER"
+      }
+    }, {
+      "match" : "netuitive.diamond.elasticsearch.cpu.normalizedpercent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "elasticsearch.jvm.mem.heap_used_percent",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    } ]
+  }
+}

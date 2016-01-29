@@ -1,0 +1,29 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Linux ElasticSearch - ElevatedJVM Threads",
+    "description" : "This policy will generate a WARNING event when the number of threads used by the Elastic Search JVM is higher than expected.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "elasticsearch.jvm.threads.count",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

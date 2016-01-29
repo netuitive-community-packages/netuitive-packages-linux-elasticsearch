@@ -1,0 +1,29 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Linux ElasticSearch - Elevated CPU Activity",
+    "description" : "This policy will generate a WARNING event when the Elastic Search CPU activity is higher than expected.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "elasticsearch.process.cpu.percent",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

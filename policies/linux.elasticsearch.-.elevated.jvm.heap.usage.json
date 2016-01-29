@@ -1,0 +1,29 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Linux ElasticSearch - Elevated JVM Heap Usage",
+    "description" : "This policy will generate a WARNING event when the Elastic Search JVM's heap usage is higher than expected.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 900,
+    "conditions" : [ {
+      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

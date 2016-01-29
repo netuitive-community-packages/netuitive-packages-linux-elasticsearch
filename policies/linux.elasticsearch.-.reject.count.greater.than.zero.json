@@ -1,0 +1,29 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Linux ElasticSearch - Reject Count Greater Than Zero",
+    "description" : "This policy will generate a WARNING if any of the Elastic Search thread pools has a \"rejected\" count greater than 0.",
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "SERVER",
+      "elementTags" : { }
+    },
+    "duration" : 300,
+    "conditions" : [ {
+      "metric" : "",
+      "wildcard" : "elasticsearch.thread_pool.*.rejected",
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 0.0
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}
