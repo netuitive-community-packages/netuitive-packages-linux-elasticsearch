@@ -47,9 +47,9 @@
       "content" : null
     }
   } ],
-  "analyticConfigurations" : [  {
+  "analyticConfigurations" : [ {
     "data" : {
-      "file" : "analyticConfigurations/computed_metric-elastic.search.json",
+      "file" : "analyticConfigurations/ace-elastic.search.json",
       "encoding" : "application/json",
       "content" : null
     }
