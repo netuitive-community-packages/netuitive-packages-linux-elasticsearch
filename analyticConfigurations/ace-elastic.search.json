@@ -33,5 +33,11 @@
   "properties" : {
     "baseline" : true,
     "correlation" : true
+  } 
+}, {
+  "match" : "elasticsearch\\.indices\\.[^_d].*",
+  "properties" : {
+    "baseline" : false,
+    "correlation" : false
   }
 } ]
