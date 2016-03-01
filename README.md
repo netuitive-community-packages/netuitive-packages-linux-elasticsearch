@@ -2,6 +2,10 @@
 
 ##Release History
 
+###Version 1.0.2
+
+* Fixed a bug in the ACE configuration that prevented the package from being provisioned.
+
 ###Version 1.0.1
 
 * Turned off correlation for some metrics to allow for more efficient processing.
