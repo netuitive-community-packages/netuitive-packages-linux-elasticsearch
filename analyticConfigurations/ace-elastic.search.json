@@ -1,57 +1,45 @@
 {
- "analyticConfiguration" : {
-   "tenantId" : null,
-   "type" : "ACE",
-   "id" : null,
-   "packageId" : null,
-   "name" : "Elastic Search",
-   "scope" : {
-     "elementName" : null,
-     "elementType" : "SERVER",
-     "elementTags" : null
-   },
-  "metrics" : [ 
-    {
-    "match" : "elasticsearch.cache.filter.*",
-    "properties" : {
-      "baseline" : true,
-      "correlation" : true
-    }
-  }, {
-    "match" : "elasticsearch.disk.*",
-    "properties" : {
-      "baseline" : true,
-      "correlation" : true
-    }
-  }, {
-    "match" : "elasticsearch.http.*",
-    "properties" : {
-      "baseline" : true,
-      "correlation" : true
-    }
-  }, {
-    "match" : "elasticsearch.indices._all.*",
-    "properties" : {
-      "baseline" : true,
-      "correlation" : true
-    }
-  }, {
-    "match" : "elasticsearch.indices.datastore.*",
-    "properties" : {
-      "baseline" : true,
-      "correlation" : true
-    }
-  }, {
-    "match" : "elasticsearch.indices.docs.*",
-    "properties" : {
-      "baseline" : true,
-      "correlation" : true
-    } 
-  }, {
-    "match" : "elasticsearch\\.indices\\.[^_d].*",
-    "properties" : {
-      "baseline" : false,
-      "correlation" : false
-    }
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "Elastic Search",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "SERVER",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "elasticsearch.cache.filter.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "elasticsearch.disk.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "elasticsearch.http.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "elasticsearch.indices.*",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "elasticsearch\\.indices\\.[^_d].*",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
   } ]
+  }
 }

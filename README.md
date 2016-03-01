@@ -1,4 +1,4 @@
-#netuitive.packages.linux.elasticsearch 1.0.1
+#netuitive.packages.linux.elasticsearch 1.0.2
 
 ##Release History
 
