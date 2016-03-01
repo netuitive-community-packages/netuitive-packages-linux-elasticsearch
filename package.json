@@ -59,6 +59,12 @@
       "encoding" : "application/json",
       "content" : null
     }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/metric_meta-elastic.search.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
   } ],
   "dashboards" : [ ]
 }
