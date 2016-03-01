@@ -1,6 +1,10 @@
-#netuitive.packages.linux.elasticsearch 1.0.1
+#netuitive.packages.linux.elasticsearch 1.0.2
 
 ##Release History
+
+###Version 1.0.2
+
+* Fixed a bug in the ACE configuration that prevented the package from being provisioned.
 
 ###Version 1.0.1
 
