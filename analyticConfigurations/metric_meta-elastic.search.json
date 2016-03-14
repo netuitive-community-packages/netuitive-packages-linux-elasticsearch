@@ -59,7 +59,7 @@
         "type" : "COUNTER"
       }
     }, {
-      "match" : "netuitive.diamond.elasticsearch.cpu.normalizedpercent",
+      "match" : "netuitive.linux.elasticsearch.cpu.normalizedpercent",
       "properties" : {
         "tags" : {
           "utilization" : true

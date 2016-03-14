@@ -11,10 +11,10 @@
       "elementTags" : null
     },
     "metrics" : [ {
-      "match" : "netuitive.diamond.elasticsearch.cpu.normalizedpercent",
+      "match" : "netuitive.linux.elasticsearch.cpu.normalizedpercent",
       "properties" : {
         "expression" : "attribute['cpus'] == null ? null : (data['elasticsearch.process.cpu.percent'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.diamond.elasticsearch.cpu.normalizedpercent"
+        "fqn" : "netuitive.linux.elasticsearch.cpu.normalizedpercent"
       }
     } ]
   }

@@ -1,6 +1,10 @@
-#netuitive.packages.linux.elasticsearch 1.0.2
+#netuitive.packages.linux.elasticsearch 1.1.0
 
 ##Release History
+
+###Version 1.1.0
+
+* Renamed computed metrics to follow new naming convention.
 
 ###Version 1.0.2
 
