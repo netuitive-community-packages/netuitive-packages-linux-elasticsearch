@@ -1,4 +1,4 @@
-#netuitive.packages.linux.elasticsearch 1.0.1
+#netuitive.packages.linux.elasticsearch 1.0.2
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/integrations/elastic_search.htm).
 
