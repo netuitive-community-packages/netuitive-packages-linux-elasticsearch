@@ -1,8 +1,12 @@
-#netuitive.packages.linux.elasticsearch 1.0.2
+#netuitive.packages.linux.elasticsearch 1.1.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/integrations/elastic_search.htm).
 
 ##Release History
+
+###Version 1.1.0
+
+* Renamed computed metrics to follow new naming convention.
 
 ###Version 1.0.2
 
@@ -15,3 +19,4 @@ For detailed information on this package, please refer to the [online documentat
 ###Version 1.0.0
 
 * Initial production release of the package for monitoring ElasticSearch resources.  This package works with the ElasticSearch collector of the Linux Agent.
+
