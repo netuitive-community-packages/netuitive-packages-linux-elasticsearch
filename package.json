@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.linux.elasticsearch",
-  "version" : "1.1.0",
+  "version" : "1.2.0",
   "manifest" : {
     "name" : "Netuitive Packages Linux ElasticSearch",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the elements collected from the ElasticSearch collector in the Netuitive Agent.",
@@ -66,5 +66,11 @@
       "content" : null
     }
   } ],
-  "dashboards" : [ ]
+  "dashboards" : [ {
+    "data" : {
+      "file" : "dashboards/elasticsearch.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  } ]
 }

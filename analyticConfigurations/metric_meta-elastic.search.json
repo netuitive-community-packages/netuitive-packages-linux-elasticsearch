@@ -62,6 +62,7 @@
       "match" : "netuitive.linux.elasticsearch.cpu.normalizedpercent",
       "properties" : {
         "tags" : {
+          "unit" : "percent",
           "utilization" : true
         },
         "validMax" : 100
@@ -70,9 +71,74 @@
       "match" : "elasticsearch.jvm.mem.heap_used_percent",
       "properties" : {
         "tags" : {
+          "unit" : "percent",
           "utilization" : true
         },
         "validMax" : 100
+      }
+    }, {
+      "match" : "elasticsearch.process.cpu.percent",
+      "properties" : {
+        "tags" : {
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "elasticsearch\\..*size$",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\..*size$",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\.process\\.(?!cpu\\.percent$)",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\.jvm\\.mem\\.(?!.*_percent$)",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\..*(milliseconds|time)$",
+      "properties" : {
+        "tags" : {
+          "unit" : "ms"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\..*(evictions|count|current|deleted|total|active|completed)$",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\.cluster_.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
+      }
+    }, {
+      "match" : "elasticsearch\\.network\\..*",
+      "properties" : {
+        "tags" : {
+          "unit" : "count"
+        }
       }
     } ]
   }
