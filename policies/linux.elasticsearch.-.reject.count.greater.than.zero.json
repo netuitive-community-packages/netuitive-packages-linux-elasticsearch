@@ -14,7 +14,10 @@
       "wildcard" : "elasticsearch.thread_pool.*.rejected",
       "analytic" : "actual",
       "operator" : ">",
-      "level" : 0.0
+      "level" : 0.0,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
@@ -24,6 +27,7 @@
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
+    "creatorEmail" : null,
     "lastUpdated" : null
   }
 }
