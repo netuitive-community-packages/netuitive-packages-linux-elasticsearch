@@ -1,8 +1,12 @@
-#netuitive.packages.linux.elasticsearch 1.2.0
+#netuitive.packages.linux.elasticsearch 1.2.1
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/integrations/elastic_search.htm).
 
 ##Release History
+
+###Version 1.2.1
+
+* Fixed a bug where some metrics weren't getting units applied.
 
 ###Version 1.2.0
 
