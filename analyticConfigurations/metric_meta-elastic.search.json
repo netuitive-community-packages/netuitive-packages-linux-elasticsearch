@@ -85,14 +85,7 @@
         "validMax" : 100
       }
     }, {
-      "match" : "elasticsearch\\..*size$",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "elasticsearch\\..*size$",
+      "match" : "elasticsearch\\..*(size|size_in_bytes)$",
       "properties" : {
         "tags" : {
           "unit" : "bytes"
@@ -113,7 +106,7 @@
         }
       }
     }, {
-      "match" : "elasticsearch\\..*(milliseconds|time)$",
+      "match" : "elasticsearch\\..*(milliseconds|time|millis)$",
       "properties" : {
         "tags" : {
           "unit" : "ms"
