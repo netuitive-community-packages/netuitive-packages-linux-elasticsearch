@@ -8,7 +8,8 @@
     "scope" : {
       "elementName" : null,
       "elementType" : "SERVER",
-      "elementTags" : null
+      "elementTags" : null,
+      "metricMatches" : "^elasticsearch\\..*"
     },
     "metrics" : [ {
       "match" : "elasticsearch.disk.*",

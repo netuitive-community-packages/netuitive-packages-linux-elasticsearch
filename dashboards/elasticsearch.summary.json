@@ -15,7 +15,7 @@
     "userId" : null,
     "creatorEmail" : null,
     "created" : "2016-06-16T15:44:56Z",
-    "updated" : "2016-06-16T20:32:50Z",
+    "updated" : "2016-06-17T16:49:47Z",
     "widgets" : [ {
       "id" : "ead80a61-6ce2-4271-84f0-5175b6044943",
       "name" : "Top 5 Slowest Nodes by Fetch Time",
@@ -48,7 +48,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-06-16T15:53:29Z",
-      "updated" : "2016-06-16T19:58:42Z"
+      "updated" : "2016-06-17T16:49:24Z"
     }, {
       "id" : "d206a103-1c59-4ec8-9c41-f48eb8400c61",
       "name" : "Top 5 Clusters by Doc Count",
