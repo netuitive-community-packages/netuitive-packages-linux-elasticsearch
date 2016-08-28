@@ -5,6 +5,9 @@
     "description" : "This policy will generate a WARNING if any of the Elastic Search thread pools has a \"rejected\" count greater than 0.",
     "scope" : {
       "elementName" : "",
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
       "elementType" : "SERVER",
       "elementTags" : { }
     },
@@ -12,6 +15,7 @@
     "conditions" : [ {
       "metric" : "",
       "wildcard" : "elasticsearch.thread_pool.*.rejected",
+      "metricScopeTags" : { },
       "analytic" : "actual",
       "operator" : ">",
       "level" : 0.0,
@@ -19,6 +23,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     } ],
+    "eventConditions" : [ ],
     "actions" : [ {
       "type" : "event",
       "category" : 2
