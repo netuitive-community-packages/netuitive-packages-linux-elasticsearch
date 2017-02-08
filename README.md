@@ -1,6 +1,6 @@
 #netuitive.packages.linux.elasticsearch 1.2.3
 
-For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/Netuitive/integrations/elastic_search.htm).
+For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/elastic_search.htm).
 
 ##Release History
 
