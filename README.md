@@ -1,8 +1,12 @@
-#netuitive.packages.linux.elasticsearch 1.2.3
+#netuitive.packages.linux.elasticsearch 1.3.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/elastic_search.htm).
 
 ##Release History
+
+###Version 1.3.0
+
+* Updated gridstack dashboard layouts 
 
 ###Version 1.2.3
 
