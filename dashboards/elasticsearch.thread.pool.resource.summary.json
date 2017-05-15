@@ -1,0 +1,86 @@
+{
+  "dashboard" : {
+    "name" : "ElasticSearch Thread Pool Resource Summary",
+    "description" : null,
+    "layout" : null,
+    "properties" : {
+      "integrationType" : null,
+      "timeRangeDuration" : "3600",
+      "gridstackContents" : "[{\"id\":\"419b7bad-8287-4861-afa8-b342e8fc110e\",\"x\":0,\"y\":0,\"width\":6,\"height\":7},{\"id\":\"9abadd3b-4f9b-403a-b453-2e24ec9e9f24\",\"x\":6,\"y\":0,\"width\":6,\"height\":7},{\"id\":\"de792c59-6ddb-4a8b-9a44-9a365a5255bd\",\"x\":0,\"y\":7,\"width\":6,\"height\":7}]",
+      "refreshIntervalSeconds" : "300",
+      "wrap" : "true"
+    },
+    "widgets" : [ {
+      "id" : "de792c59-6ddb-4a8b-9a44-9a365a5255bd",
+      "name" : "Elastic Search Cache Evictions",
+      "description" : null,
+      "widgetType" : "stacked-area",
+      "properties" : {
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
+        "elementScopeTypes" : "[\"SERVER\"]",
+        "metricLimit" : "10",
+        "useAllMetricScopeTags" : "true",
+        "showArea" : "false",
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "showHighest" : "true",
+        "metricScopeTags" : "[]",
+        "metrics" : "[{\"fqn\":\"elasticsearch.fielddata.evictions\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.cache.filter.evictions\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.cache.query.evictions\",\"aggFns\":[]}]",
+        "selectedTab" : "table"
+      }
+    }, {
+      "id" : "419b7bad-8287-4861-afa8-b342e8fc110e",
+      "name" : "Elastic Search Thread Pool Queues",
+      "description" : null,
+      "widgetType" : "stacked-area",
+      "properties" : {
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
+        "elementScopeTypes" : "[\"SERVER\"]",
+        "metricLimit" : "10",
+        "useAllMetricScopeTags" : "true",
+        "showArea" : "false",
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "showHighest" : "true",
+        "metricScopeTags" : "[]",
+        "metrics" : "[{\"fqn\":\"elasticsearch.thread_pool.bulk.queue\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.thread_pool.index.queue\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.thread_pool.merge.queue\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.thread_pool.search.queue\",\"aggFns\":[]}]",
+        "selectedTab" : "table"
+      }
+    }, {
+      "id" : "9abadd3b-4f9b-403a-b453-2e24ec9e9f24",
+      "name" : "Elastic Search Thread Pool Rejected",
+      "description" : null,
+      "widgetType" : "stacked-area",
+      "properties" : {
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
+        "elementScopeTypes" : "[\"SERVER\"]",
+        "metricLimit" : "10",
+        "useAllMetricScopeTags" : "true",
+        "showArea" : "false",
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "showHighest" : "true",
+        "metricScopeTags" : "[]",
+        "metrics" : "[{\"fqn\":\"elasticsearch.thread_pool.bulk.rejected\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.thread_pool.index.rejected\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.thread_pool.merge.rejected\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.thread_pool.search.rejected\",\"aggFns\":[]}]",
+        "selectedTab" : "table"
+      }
+    } ],
+    "type" : "DEFAULT",
+    "private" : false
+  }
+}
