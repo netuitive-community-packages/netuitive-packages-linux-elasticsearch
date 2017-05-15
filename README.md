@@ -6,8 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ###Version 1.4.0
 
-* Replace existing summary dashboard with 4 summary dashboards
-* Add 3 polcies
+* Replaced existing summary dashboard with 4 summary dashboards
+* Added 3 policies
 
 ###Version 1.3.0
 

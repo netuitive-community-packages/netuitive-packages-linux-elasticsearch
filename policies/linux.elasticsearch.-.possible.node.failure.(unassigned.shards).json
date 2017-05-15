@@ -1,7 +1,7 @@
 {
   "policy" : {
     "name" : "Linux ElasticSearch - Possible Node Failure (Unassigned Shards)",
-    "description" : "This policy will generate a CRITICAL event when there are unassigned shards.",
+    "description" : "This policy will generate a WARNING event when there are unassigned shards.",
     "scope" : {
       "elementName" : null,
       "elementNameExclude" : null,

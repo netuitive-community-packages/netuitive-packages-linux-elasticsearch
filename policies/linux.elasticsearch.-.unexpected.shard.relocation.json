@@ -1,7 +1,7 @@
 {
   "policy" : {
     "name" : "Linux ElasticSearch - Unexpected Shard Relocation",
-    "description" : "This policy will generate a CRITICAL event when there are shards relocating, but the total number of nodes has not changed.",
+    "description" : "This policy will generate a WARNING event when there are shards relocating, but the total number of nodes has not changed.",
     "scope" : {
       "elementName" : null,
       "elementNameExclude" : null,
