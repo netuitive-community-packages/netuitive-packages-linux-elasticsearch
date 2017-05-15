@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.linux.elasticsearch",
-  "version" : "1.3.0",
+  "version" : "1.4.0",
   "manifest" : {
     "name" : "Netuitive Packages Linux ElasticSearch",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of the elements collected from the ElasticSearch collector in the Netuitive Agent.",
@@ -46,6 +46,24 @@
       "encoding" : "application/json",
       "content" : null
     }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.possible.node.loss.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.possible.node.failure.(unassigned.shards).json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.unexpected.shard.relocation.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
   } ],
   "analyticConfigurations" : [ {
     "data" : {
@@ -68,7 +86,25 @@
   } ],
   "dashboards" : [ {
     "data" : {
-      "file" : "dashboards/elasticsearch.summary.json",
+      "file" : "dashboards/elasticsearch.system.resources.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/elasticsearch.search.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/elasticsearch.indexing.summary.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "dashboards/elasticsearch.thread.pool.resource.summary.json",
       "encoding" : "application/json",
       "content" : null
     }
