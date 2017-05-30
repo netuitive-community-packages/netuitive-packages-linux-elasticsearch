@@ -6,7 +6,7 @@
     "properties" : {
       "integrationType" : null,
       "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"e484ed98-35e5-4893-9089-80dcae139420\",\"x\":0,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"bd709964-9d3e-4bde-8929-de9d4acf448c\",\"x\":9,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"61cf076a-5e48-47a5-97d5-e9b164041ae1\",\"x\":6,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"c74c5096-da95-4791-8760-c6ad4b032f67\",\"x\":0,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"3777127e-f727-460b-b7f7-d915b24f94fd\",\"x\":3,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"52c5992e-d692-478a-acaf-482f78143cb3\",\"x\":6,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"5ce3419e-f5fd-4ed8-8c0d-929882860b31\",\"x\":9,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"dbdddba2-ca09-4ad3-99f3-a2474afd8ce7\",\"x\":3,\"y\":0,\"width\":3,\"height\":8}]",
+      "gridstackContents" : "[{\"id\":\"e484ed98-35e5-4893-9089-80dcae139420\",\"x\":0,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"dbdddba2-ca09-4ad3-99f3-a2474afd8ce7\",\"x\":3,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"61cf076a-5e48-47a5-97d5-e9b164041ae1\",\"x\":6,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"c74c5096-da95-4791-8760-c6ad4b032f67\",\"x\":0,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"3777127e-f727-460b-b7f7-d915b24f94fd\",\"x\":3,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"52c5992e-d692-478a-acaf-482f78143cb3\",\"x\":6,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"5ce3419e-f5fd-4ed8-8c0d-929882860b31\",\"x\":9,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"7bd2e400-6506-4cbb-8cf1-da566fea1282\",\"x\":9,\"y\":8,\"width\":3,\"height\":8}]",
       "refreshIntervalSeconds" : "300",
       "wrap" : "true"
     },
@@ -31,29 +31,6 @@
         "showHighest" : "true",
         "metricScopeTags" : "[]",
         "metrics" : "[{\"fqn\":\"elasticsearch.cluster_health.status\",\"aggFns\":[\"min\"]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "bd709964-9d3e-4bde-8929-de9d4acf448c",
-      "name" : "Elastic Search Network Transport",
-      "description" : null,
-      "widgetType" : "stacked-area",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "metrics" : "[{\"fqn\":\"elasticsearch.transport.rx.count\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.transport.tx.count\",\"aggFns\":[]}]",
         "selectedTab" : "table"
       }
     }, {
@@ -135,6 +112,32 @@
         "metric_fqn" : "netuitive.linux.elasticsearch.cpu.normalizedpercent",
         "metricScopeTags" : "[]",
         "metricAgg" : "avg",
+        "metrics" : "[]",
+        "selectedTab" : "graph"
+      }
+    }, {
+      "id" : "7bd2e400-6506-4cbb-8cf1-da566fea1282",
+      "name" : "Top 5 Highest Network Transport RX",
+      "description" : null,
+      "widgetType" : "high-low-metric",
+      "properties" : {
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
+        "elementScopeTypes" : "[\"SERVER\"]",
+        "metricLimit" : "5",
+        "useAllMetricScopeTags" : "true",
+        "showArea" : "false",
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[]",
+        "elementNameContains" : "",
+        "showHighest" : "true",
+        "metric_fqn" : "elasticsearch.transport.rx.count",
+        "metricScopeTags" : "[]",
+        "metricAgg" : "max",
         "metrics" : "[]",
         "selectedTab" : "graph"
       }

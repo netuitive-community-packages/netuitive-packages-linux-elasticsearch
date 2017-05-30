@@ -4,6 +4,11 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.4.2
+
+* Updated 4 None-Top-5 widgets to use Top-5 widget type
+* Removed Policies and Analytic Configurations to make it Dashboard Only
+
 ### Version 1.4.1
 
 * Readme formatting
