@@ -59,7 +59,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.search.query_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.search.query_avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metrics" : "[]",
         "selectedTab" : "graph"
@@ -113,7 +113,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.search.fetch_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.search.fetch_avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metrics" : "[]",
         "selectedTab" : "graph"
