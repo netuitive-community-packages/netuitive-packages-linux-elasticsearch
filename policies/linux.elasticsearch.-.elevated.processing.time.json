@@ -14,7 +14,7 @@
     "duration" : 900,
     "conditions" : [ {
       "metric" : "",
-      "wildcard" : "elasticsearch.indices._all.*time_in_millis",
+      "wildcard" : "netuitive.linux.elasticsearch.indices._all.*time_in_millis",
       "metricScopeTags" : { },
       "analytic" : "baselineDeviation",
       "operator" : ">",
