@@ -69,6 +69,14 @@
         "validMax" : 100
       }
     }, {
+      "match" : "netuitive.linux.elasticsearch\\..*_time_in_millis$",
+      "properties" : {
+        "sparseDataStrategy" : "ReplaceWithZero",
+        "tags" : {
+          "unit" : "ms"
+        }
+      }
+    },{
       "match" : "elasticsearch.jvm.mem.heap_used_percent",
       "properties" : {
         "tags" : {

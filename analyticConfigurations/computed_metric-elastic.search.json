@@ -1,22 +1,136 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Elastic Search",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^elasticsearch\\..*"
+  "analyticConfiguration": {
+    "tenantId": null,
+    "type": "COMPUTED_METRIC",
+    "id": null,
+    "packageId": null,
+    "name": "Elastic Search",
+    "scope": {
+      "elementName": null,
+      "elementType": "SERVER",
+      "elementTags": null,
+      "metricMatches": "^elasticsearch\\..*"
     },
-    "metrics" : [ {
-      "match" : "netuitive.linux.elasticsearch.cpu.normalizedpercent",
-      "properties" : {
-        "expression" : "attribute['cpus'] == null ? null : (data['elasticsearch.process.cpu.percent'].actual / attribute['cpus'].value)",
-        "fqn" : "netuitive.linux.elasticsearch.cpu.normalizedpercent"
+    "metrics": [
+      {
+        "match": "netuitive.linux.elasticsearch.cpu.normalizedpercent",
+        "properties": {
+          "expression": "attribute['cpus'] == null ? null : (data['elasticsearch.process.cpu.percent'].actual / attribute['cpus'].value)",
+          "fqn": "netuitive.linux.elasticsearch.cpu.normalizedpercent"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.flush.avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.flush.total_time_in_millis'].actual / data['elasticsearch.indices.${1}.flush.total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.flush\\.total_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.flush.avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.get.exists_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.get.exists_time_in_millis'].actual / data['elasticsearch.indices.${1}.get.exists_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.get\\.exists_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.exists_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.get.missing_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.get.missing_time_in_millis'].actual / data['elasticsearch.indices.${1}.get.missing_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.get\\.missing_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.missing_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.get.avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.get.time_in_millis'].actual / data['elasticsearch.indices.${1}.get.total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.get\\.time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.indexing.delete_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.indexing.delete_time_in_millis'].actual / data['elasticsearch.indices.${1}.indexing.delete_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.delete_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.delete_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.indexing.index_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.indexing.index_time_in_millis'].actual / data['elasticsearch.indices.${1}.indexing.index_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.index_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.index_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.merges.avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.merges.total_time_in_millis'].actual / data['elasticsearch.indices.${1}.merges.total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.merges\\.total_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.merges.avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.refresh.avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.refresh.total_time_in_millis'].actual / data['elasticsearch.indices.${1}.refresh.total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.refresh\\.total_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.refresh.avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.search.fetch_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.search.fetch_time_in_millis'].actual / data['elasticsearch.indices.${1}.search.fetch_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.search\\.fetch_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.fetch_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.search.query_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.search.query_time_in_millis'].actual / data['elasticsearch.indices.${1}.search.query_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.search\\.query_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.query_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.search.scroll_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.search.scroll_time_in_millis'].actual / data['elasticsearch.indices.${1}.search.scroll_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.search\\.scroll_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.scroll_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.search.suggest_avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.search.suggest_time_in_millis'].actual / data['elasticsearch.indices.${1}.search.suggest_total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.search\\.suggest_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.suggest_avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.warmer.avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.warmer.total_time_in_millis'].actual / data['elasticsearch.indices.${1}.warmer.total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.warmer\\.total_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.warmer.avg_time_in_millis"
+        }
+      },
+      {
+        "match": "elasticsearch.indices.index.percolate.avg_time_in_millis",
+        "properties": {
+          "expression": "data['elasticsearch.indices.${1}.percolate.time_in_millis'].actual / data['elasticsearch.indices.${1}.percolate.total'].actual",
+          "for": "elasticsearch\\.indices\\.(.*?)\\.percolate\\.total_time_in_millis",
+          "fqn": "netuitive.linux.elasticsearch.indices.${1}.percolate.avg_time_in_millis"
+        }
       }
-    } ]
+    ]
   }
 }
