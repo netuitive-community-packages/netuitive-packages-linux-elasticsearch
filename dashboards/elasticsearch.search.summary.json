@@ -37,7 +37,7 @@
       }
     }, {
       "id" : "93b39911-141e-430c-ab7f-3bdf77f71a5c",
-      "name" : "Top 5 Slowest Nodes by Query Time",
+      "name" : "Top 5 Nodes by Highest Average Query Time",
       "description" : null,
       "widgetType" : "high-low-metric",
       "properties" : {
@@ -59,7 +59,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.search.query_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.search.query_avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metrics" : "[]",
         "selectedTab" : "graph"
@@ -91,7 +91,7 @@
       }
     }, {
       "id" : "b11fe5f5-55bb-4641-923c-8f03e257d032",
-      "name" : "Top 5 Slowest Nodes by Fetch Time",
+      "name" : "Top 5 Nodes by Highest Average Fetch Time",
       "description" : null,
       "widgetType" : "high-low-metric",
       "properties" : {
@@ -113,7 +113,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.search.fetch_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.search.fetch_avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metrics" : "[]",
         "selectedTab" : "graph"

@@ -42,7 +42,7 @@
       }
     }, {
       "id" : "bbf3a7a3-36f2-4787-a242-dc710c597b27",
-      "name" : "Top 5 Slowest Nodes by Flush Time",
+      "name" : "Top 5 Nodes by Highest Average Flush Time",
       "description" : null,
       "widgetType" : "high-low-metric",
       "properties" : {
@@ -64,7 +64,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.flush.total_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.flush.avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metricAgg" : "max",
         "metrics" : "[]",
@@ -72,7 +72,7 @@
       }
     }, {
       "id" : "c0ae72d0-dcfd-4ace-b686-ce32f1272e3d",
-      "name" : "Top 5 Slowest Nodes by Refresh Time",
+      "name" : "Top 5 Nodes by Highest Average Refresh Time",
       "description" : null,
       "widgetType" : "high-low-metric",
       "properties" : {
@@ -94,7 +94,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.refresh.total_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.refresh.avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metricAgg" : "max",
         "metrics" : "[]",
@@ -102,7 +102,7 @@
       }
     }, {
       "id" : "032b785a-a3db-4162-9740-13e83528d5cf",
-      "name" : "Top 5 Slowest Nodes by Indexing Time",
+      "name" : "Top 5 Nodes by Highest Average Indexing Time",
       "description" : null,
       "widgetType" : "high-low-metric",
       "properties" : {
@@ -124,7 +124,7 @@
         "groupName" : null,
         "elementNameContains" : null,
         "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.indexing.index_time_in_millis",
+        "metric_fqn" : "netuitive.linux.elasticsearch.indices._all.indexing.index_avg_time_in_millis",
         "metricScopeTags" : "[]",
         "metrics" : "[]",
         "selectedTab" : "graph"

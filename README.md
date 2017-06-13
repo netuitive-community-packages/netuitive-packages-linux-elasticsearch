@@ -1,8 +1,13 @@
-# netuitive.packages.linux.elasticsearch 1.4.1
+# netuitive.packages.linux.elasticsearch
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/elastic_search.htm).
 
 ## Release History
+
+### Version 1.5.0
+
+* Add computed metrics for average Elasticsearch query times
+* Update query time dashboard widgets to use the new computed metrics
 
 ### Version 1.4.1
 
@@ -15,7 +20,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version 1.3.0
 
-* Updated gridstack dashboard layouts 
+* Updated gridstack dashboard layouts
 
 ### Version 1.2.3
 
