@@ -4,6 +4,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.5.1
+
 * Fix policy elementTypes compatibility
 
 ### Version 1.5.0
