@@ -91,7 +91,7 @@
         "tags" : {
           "unit" : "percent"
         },
-        "validMax" : 100
+        "validMax" : null
       }
     }, {
       "match" : "elasticsearch\\..*(size|size_in_bytes)$",
