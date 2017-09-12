@@ -1,7 +1,7 @@
 {
   "policy" : {
-    "name" : "Linux ElasticSearch - Elevated JVM Heap Percent Usage",
-    "description" : "This policy will generate a WARNING event when the Elastic Search JVM's heap usage is above 80%.",
+    "name" : "Linux ElasticSearch - Cluster Health Degraded to Yellow",
+    "description" : "The cluster health status is yellow which means that one or more shard replica(s) is missing.",
     "scope" : {
       "elementName" : null,
       "elementNameExclude" : null,
@@ -12,34 +12,24 @@
       "elementTags" : { },
       "elementAttributes" : [ ]
     },
-    "duration" : 600,
+    "duration" : 900,
     "conditions" : [ {
-      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
+      "metric" : "elasticsearch.cluster_health.status",
       "wildcard" : null,
       "metricScopeTags" : { },
       "analytic" : "actual",
-      "operator" : ">",
-      "level" : 80.0,
+      "operator" : ">=",
+      "level" : 1.0,
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
-    },{
-      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
+    }, {
+      "metric" : "elasticsearch.cluster_health.status",
       "wildcard" : null,
       "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    },{
-      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
+      "analytic" : "actual",
+      "operator" : "<=",
+      "level" : 1.8,
       "level2" : null,
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
