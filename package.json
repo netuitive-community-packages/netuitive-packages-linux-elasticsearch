@@ -18,7 +18,43 @@
   },
   "policies" : [ {
     "data" : {
+      "file" : "policies/linux.elasticsearch.-.cluster.health.degraded.to.red.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.cluster.health.degraded.to.yellow.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.disk.space.is.more.than.75%.used.on.data.node.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
       "file" : "policies/linux.elasticsearch.-.elevated.cpu.activity.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.elevated.fetch.time.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.elevated.flush.time.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "policies/linux.elasticsearch.-.elevated.indexing.time.json",
       "encoding" : "application/json",
       "content" : null
     }
