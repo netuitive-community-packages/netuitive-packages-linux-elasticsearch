@@ -36,12 +36,6 @@
     }
   }, {
     "data" : {
-      "file" : "policies/linux.elasticsearch.-.elevated.cpu.activity.json",
-      "encoding" : "application/json",
-      "content" : null
-    }
-  }, {
-    "data" : {
       "file" : "policies/linux.elasticsearch.-.elevated.fetch.time.json",
       "encoding" : "application/json",
       "content" : null
@@ -61,18 +55,6 @@
   }, {
     "data" : {
       "file" : "policies/linux.elasticsearch.-.elevated.jvm.heap.usage.json",
-      "encoding" : "application/json",
-      "content" : null
-    }
-  }, {
-    "data" : {
-      "file" : "policies/linux.elasticsearch.-.elevated.processing.time.json",
-      "encoding" : "application/json",
-      "content" : null
-    }
-  }, {
-    "data" : {
-      "file" : "policies/linux.elasticsearch.-.elevatedjvm.threads.json",
       "encoding" : "application/json",
       "content" : null
     }
