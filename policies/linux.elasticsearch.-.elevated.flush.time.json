@@ -1,0 +1,35 @@
+{
+  "policy" : {
+    "name" : "Linux ElasticSearch - Elevated Flush Time",
+    "description" : "This policy will generate a WARNING if \"elasticsearch.indices._all.flush.total_time_in_millis\" metric deviates above the baseline for 15 minutes or more.",
+    "scope" : {
+      "elementName" : null,
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
+      "elementType" : null,
+      "elementTypes" : [ "SERVER" ],
+      "elementTags" : { },
+      "elementAttributes" : [ ]
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "netuitive.linux.elasticsearch.indices._all.flush.avg_time_in_millis",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "baselineDeviation",
+      "operator" : ">",
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "eventConditions" : [ ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : true,
+    "deleted" : false
+  }
+}
