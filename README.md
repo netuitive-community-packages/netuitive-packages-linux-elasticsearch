@@ -4,6 +4,12 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.7.0
+
+* Remove policy for Elevated CPU Activity
+* Remove policy for Elevated Processing Time
+* Remove policy for Elevated JVM Threads
+
 ### Version 1.6.0
 
 * Add policy for Cluster Health Degraded to Red
