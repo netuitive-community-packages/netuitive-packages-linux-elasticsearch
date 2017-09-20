@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 1.6.0
 
 * Add policy for Cluster Health Degraded to Red
 * Add policy for Cluster Health Degraded to Yellow
