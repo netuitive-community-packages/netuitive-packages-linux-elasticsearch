@@ -1,0 +1,37 @@
+{
+  "policy" : {
+    "name" : "Linux ElasticSearch - Disk space is more than 75% used on data node",
+    "description" : "The average utilization across your Elastic Search data node storage devices are more than 75%. ",
+    "scope" : {
+      "elementName" : null,
+      "elementNameExclude" : null,
+      "fqnIncludes" : [ ],
+      "fqnExcludes" : [ ],
+      "elementType" : null,
+      "elementTypes" : [ "SERVER" ],
+      "elementTags" : {
+        "service" : "elasticsearch-data"
+      },
+      "elementAttributes" : [ ]
+    },
+    "duration" : 600,
+    "conditions" : [ {
+      "metric" : "netuitive.linux.diskspace.avg_byte_percentused",
+      "wildcard" : null,
+      "metricScopeTags" : { },
+      "analytic" : "actual",
+      "operator" : ">",
+      "level" : 75.0,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
+    } ],
+    "eventConditions" : [ ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 2
+    } ],
+    "enabled" : false,
+    "deleted" : false
+  }
+}

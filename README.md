@@ -4,6 +4,16 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.6.0
+
+* Add policy for Cluster Health Degraded to Red
+* Add policy for Cluster Health Degraded to Yellow
+* Add policy for Disk space is more than 75% used on data node
+* Add policy for Elevated Fetch Time
+* Add policy for Elevated Flush Time
+* Add policy for Elevated Indexing Time
+* Update Elevated JVM Heap Percent Usage policy to require >80% and both deviations
+
 ### Version 1.5.1
 
 * Fix policy elementTypes compatibility
