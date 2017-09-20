@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 1.7.0
 
 * Remove policy for Elevated CPU Activity
 * Remove policy for Elevated Processing Time
