@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.8.0
+
+* Add computed metrics for index operations per second.
+
 ### Version 1.7.0
 
 * Remove policy for Elevated CPU Activity
