@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version next
+### Version 1.8.0
 
 * Add computed metrics for index operations per second.
 
