@@ -1,45 +1,34 @@
 {
-  "policy" : {
-    "name" : "Linux ElasticSearch - Cluster Health Degraded to Yellow",
-    "description" : "The cluster health status is yellow which means that one or more shard replica(s) is missing.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : null,
-      "elementTypes" : [ "SERVER" ],
-      "elementTags" : { },
-      "elementAttributes" : [ ]
-    },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : "elasticsearch.cluster_health.status",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">=",
-      "level" : 1.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "elasticsearch.cluster_health.status",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : "<=",
-      "level" : 1.8,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 1,
+        "metric": "elasticsearch.cluster_health.status",
+        "operator": ">="
+      },
+      {
+        "analytic": "actual",
+        "level": 1.8,
+        "metric": "elasticsearch.cluster_health.status",
+        "operator": "<="
+      }
+    ],
+    "deleted": false,
+    "description": "The cluster health status is yellow which means that one or more shard replica(s) is missing.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Linux ElasticSearch - Cluster Health Degraded to Yellow",
+    "scope": {
+      "elementTypes": [
+        "SERVER"
+      ]
+    }
   }
 }

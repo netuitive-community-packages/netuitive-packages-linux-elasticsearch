@@ -1,16 +1,5 @@
 {
   "analyticConfiguration": {
-    "tenantId": null,
-    "type": "COMPUTED_METRIC",
-    "id": null,
-    "packageId": null,
-    "name": "Elastic Search",
-    "scope": {
-      "elementName": null,
-      "elementType": "SERVER",
-      "elementTags": null,
-      "metricMatches": "^elasticsearch\\..*"
-    },
     "metrics": [
       {
         "match": "netuitive.linux.elasticsearch.cpu.normalizedpercent",
@@ -251,6 +240,12 @@
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.warmer.avg_per_sec"
         }
       }
-    ]
+    ],
+    "name": "Elastic Search",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^elasticsearch\\..*"
+    },
+    "type": "COMPUTED_METRIC"
   }
 }

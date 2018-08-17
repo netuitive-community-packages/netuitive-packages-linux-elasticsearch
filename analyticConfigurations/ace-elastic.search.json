@@ -1,46 +1,47 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "ACE",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Elastic Search",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "SERVER",
-      "elementTags" : null,
-      "metricMatches" : "^elasticsearch\\..*"
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "elasticsearch.cache.filter.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "elasticsearch.disk.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "elasticsearch.http.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "elasticsearch.indices.*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "elasticsearch\\.indices\\.[^_d].*",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      }
+    ],
+    "name": "Elastic Search",
+    "scope": {
+      "elementType": "SERVER",
+      "metricMatches": "^elasticsearch\\..*"
     },
-    "metrics" : [ {
-      "match" : "elasticsearch.cache.filter.*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "elasticsearch.disk.*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "elasticsearch.http.*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "elasticsearch.indices.*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "elasticsearch\\.indices\\.[^_d].*",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    } ]
+    "type": "ACE"
   }
 }

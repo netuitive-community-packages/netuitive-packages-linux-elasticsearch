@@ -1,224 +1,159 @@
 {
-  "dashboard" : {
-    "name" : "ElasticSearch System Resources Summary",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"e484ed98-35e5-4893-9089-80dcae139420\",\"x\":0,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"bd709964-9d3e-4bde-8929-de9d4acf448c\",\"x\":9,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"61cf076a-5e48-47a5-97d5-e9b164041ae1\",\"x\":6,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"c74c5096-da95-4791-8760-c6ad4b032f67\",\"x\":0,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"3777127e-f727-460b-b7f7-d915b24f94fd\",\"x\":3,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"52c5992e-d692-478a-acaf-482f78143cb3\",\"x\":6,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"5ce3419e-f5fd-4ed8-8c0d-929882860b31\",\"x\":9,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"dbdddba2-ca09-4ad3-99f3-a2474afd8ce7\",\"x\":3,\"y\":0,\"width\":3,\"height\":8}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "ElasticSearch System Resources Summary",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"e484ed98-35e5-4893-9089-80dcae139420\",\"x\":0,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"bd709964-9d3e-4bde-8929-de9d4acf448c\",\"x\":9,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"61cf076a-5e48-47a5-97d5-e9b164041ae1\",\"x\":6,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"c74c5096-da95-4791-8760-c6ad4b032f67\",\"x\":0,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"3777127e-f727-460b-b7f7-d915b24f94fd\",\"x\":3,\"y\":8,\"width\":3,\"height\":8},{\"id\":\"52c5992e-d692-478a-acaf-482f78143cb3\",\"x\":6,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"5ce3419e-f5fd-4ed8-8c0d-929882860b31\",\"x\":9,\"y\":0,\"width\":3,\"height\":8},{\"id\":\"dbdddba2-ca09-4ad3-99f3-a2474afd8ce7\",\"x\":3,\"y\":0,\"width\":3,\"height\":8}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "e484ed98-35e5-4893-9089-80dcae139420",
-      "name" : "Elastic Search Cluster Health Status",
-      "description" : null,
-      "widgetType" : "multi-metric-time-series",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "metrics" : "[{\"fqn\":\"elasticsearch.cluster_health.status\",\"aggFns\":[\"min\"]}]",
-        "selectedTab" : "table"
+    "type": "DEFAULT",
+    "widgets": [
+      {
+        "id": "e484ed98-35e5-4893-9089-80dcae139420",
+        "name": "Elastic Search Cluster Health Status",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"elasticsearch.cluster_health.status\",\"aggFns\":[\"min\"]}]",
+          "selectedTab": "table",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "multi-metric-time-series"
+      },
+      {
+        "id": "bd709964-9d3e-4bde-8929-de9d4acf448c",
+        "name": "Elastic Search Network Transport",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":\"elasticsearch.transport.rx.count\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.transport.tx.count\",\"aggFns\":[]}]",
+          "selectedTab": "table",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "stacked-area"
+      },
+      {
+        "id": "dbdddba2-ca09-4ad3-99f3-a2474afd8ce7",
+        "name": "Top 5 Highest Unassigned Shards",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricAgg": "max",
+          "metricLimit": "5",
+          "metric_fqn": "elasticsearch.cluster_health.shards.unassigned",
+          "selectedTab": "graph",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "61cf076a-5e48-47a5-97d5-e9b164041ae1",
+        "name": "Top 5 Highest JVM GC Collection Time",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricAgg": "max",
+          "metricLimit": "5",
+          "metricUnit": "ms",
+          "metric_fqn": "elasticsearch.jvm.gc.collection.time",
+          "selectedTab": "graph",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "c74c5096-da95-4791-8760-c6ad4b032f67",
+        "name": "Top 5 Highest CPU Percent",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricAgg": "avg",
+          "metricLimit": "5",
+          "metricUnit": "percent",
+          "metric_fqn": "netuitive.linux.elasticsearch.cpu.normalizedpercent",
+          "selectedTab": "graph",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "3777127e-f727-460b-b7f7-d915b24f94fd",
+        "name": "Top 5 Highest JVM Heap Usage",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricLimit": "5",
+          "metricUnit": "percent",
+          "metric_fqn": "elasticsearch.jvm.mem.heap_used_percent",
+          "selectedTab": "graph",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "52c5992e-d692-478a-acaf-482f78143cb3",
+        "name": "Top 5 Highest Docs Count",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricAgg": "max",
+          "metricLimit": "5",
+          "metric_fqn": "elasticsearch.indices._all.docs.count",
+          "selectedTab": "graph",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "5ce3419e-f5fd-4ed8-8c0d-929882860b31",
+        "name": "Top 5 Highest Datastore Size",
+        "properties": {
+          "elementScopeTypes": "[\"SERVER\"]",
+          "metricAgg": "max",
+          "metricLimit": "5",
+          "metric_fqn": "elasticsearch.indices._all.datastore.size",
+          "selectedTab": "graph",
+          "showArea": "false",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "useElementNameContains": "true"
+        },
+        "widgetType": "high-low-metric"
       }
-    }, {
-      "id" : "bd709964-9d3e-4bde-8929-de9d4acf448c",
-      "name" : "Elastic Search Network Transport",
-      "description" : null,
-      "widgetType" : "stacked-area",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "metrics" : "[{\"fqn\":\"elasticsearch.transport.rx.count\",\"aggFns\":[]},{\"fqn\":\"elasticsearch.transport.tx.count\",\"aggFns\":[]}]",
-        "selectedTab" : "table"
-      }
-    }, {
-      "id" : "dbdddba2-ca09-4ad3-99f3-a2474afd8ce7",
-      "name" : "Top 5 Highest Unassigned Shards",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.cluster_health.shards.unassigned",
-        "metricScopeTags" : "[]",
-        "metricAgg" : "max",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    }, {
-      "id" : "61cf076a-5e48-47a5-97d5-e9b164041ae1",
-      "name" : "Top 5 Highest JVM GC Collection Time",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : "ms",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.jvm.gc.collection.time",
-        "metricScopeTags" : "[]",
-        "metricAgg" : "max",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    }, {
-      "id" : "c74c5096-da95-4791-8760-c6ad4b032f67",
-      "name" : "Top 5 Highest CPU Percent",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : "percent",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "elementNameContains" : "",
-        "showHighest" : "true",
-        "metric_fqn" : "netuitive.linux.elasticsearch.cpu.normalizedpercent",
-        "metricScopeTags" : "[]",
-        "metricAgg" : "avg",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    }, {
-      "id" : "3777127e-f727-460b-b7f7-d915b24f94fd",
-      "name" : "Top 5 Highest JVM Heap Usage",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : "percent",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.jvm.mem.heap_used_percent",
-        "metricScopeTags" : "[]",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    }, {
-      "id" : "52c5992e-d692-478a-acaf-482f78143cb3",
-      "name" : "Top 5 Highest Docs Count",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.docs.count",
-        "metricScopeTags" : "[]",
-        "metricAgg" : "max",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    }, {
-      "id" : "5ce3419e-f5fd-4ed8-8c0d-929882860b31",
-      "name" : "Top 5 Highest Datastore Size",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"SERVER\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "showArea" : "false",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metric_fqn" : "elasticsearch.indices._all.datastore.size",
-        "metricScopeTags" : "[]",
-        "metricAgg" : "max",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    } ],
-    "type" : "DEFAULT",
-    "private" : false
+    ]
   }
 }

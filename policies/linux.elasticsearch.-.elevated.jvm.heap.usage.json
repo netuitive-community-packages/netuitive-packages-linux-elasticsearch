@@ -1,55 +1,38 @@
 {
-  "policy" : {
-    "name" : "Linux ElasticSearch - Elevated JVM Heap Percent Usage",
-    "description" : "This policy will generate a WARNING event when the Elastic Search JVM's heap usage is above 80%.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : null,
-      "elementTypes" : [ "SERVER" ],
-      "elementTags" : { },
-      "elementAttributes" : [ ]
-    },
-    "duration" : 600,
-    "conditions" : [ {
-      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 80.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    },{
-      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    },{
-      "metric" : "elasticsearch.jvm.mem.heap_used_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 80,
+        "metric": "elasticsearch.jvm.mem.heap_used_percent",
+        "operator": ">"
+      },
+      {
+        "analytic": "baselineDeviation",
+        "metric": "elasticsearch.jvm.mem.heap_used_percent",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "elasticsearch.jvm.mem.heap_used_percent",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "This policy will generate a WARNING event when the Elastic Search JVM's heap usage is above 80%.",
+    "duration": 600,
+    "enabled": true,
+    "name": "Linux ElasticSearch - Elevated JVM Heap Percent Usage",
+    "scope": {
+      "elementTypes": [
+        "SERVER"
+      ]
+    }
   }
 }
