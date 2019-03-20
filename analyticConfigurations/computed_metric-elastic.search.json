@@ -17,7 +17,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.flush.total_time_in_millis}.actual / ${elasticsearch.indices.${1}.flush.total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.flush\\.total_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]flush[.]total_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.flush.avg_time_in_millis"
         }
       },
@@ -27,7 +27,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.get.exists_time_in_millis}.actual / ${elasticsearch.indices.${1}.get.exists_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.get\\.exists_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]get[.]exists_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.exists_avg_time_in_millis"
         }
       },
@@ -37,7 +37,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.get.missing_time_in_millis}.actual / ${elasticsearch.indices.${1}.get.missing_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.get\\.missing_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]get[.]missing_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.missing_avg_time_in_millis"
         }
       },
@@ -47,7 +47,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.get.time_in_millis}.actual / ${elasticsearch.indices.${1}.get.total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.get\\.time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]get[.]time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.avg_time_in_millis"
         }
       },
@@ -57,7 +57,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.indexing.delete_time_in_millis}.actual / ${elasticsearch.indices.${1}.indexing.delete_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.delete_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]indexing[.]delete_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.delete_avg_time_in_millis"
         }
       },
@@ -67,7 +67,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.indexing.index_time_in_millis}.actual / ${elasticsearch.indices.${1}.indexing.index_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.index_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]indexing[.]index_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.index_avg_time_in_millis"
         }
       },
@@ -77,7 +77,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.merges.total_time_in_millis}.actual / ${elasticsearch.indices.${1}.merges.total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.merges\\.total_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]merges[.]total_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.merges.avg_time_in_millis"
         }
       },
@@ -87,7 +87,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.refresh.total_time_in_millis}.actual / ${elasticsearch.indices.${1}.refresh.total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.refresh\\.total_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]refresh[.]total_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.refresh.avg_time_in_millis"
         }
       },
@@ -97,7 +97,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.fetch_time_in_millis}.actual / ${elasticsearch.indices.${1}.search.fetch_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.fetch_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]fetch_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.fetch_avg_time_in_millis"
         }
       },
@@ -107,7 +107,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.query_time_in_millis}.actual / ${elasticsearch.indices.${1}.search.query_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.query_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]query_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.query_avg_time_in_millis"
         }
       },
@@ -117,7 +117,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.scroll_time_in_millis}.actual / ${elasticsearch.indices.${1}.search.scroll_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.scroll_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]scroll_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.scroll_avg_time_in_millis"
         }
       },
@@ -127,7 +127,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.suggest_time_in_millis}.actual / ${elasticsearch.indices.${1}.search.suggest_total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.suggest_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]suggest_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.suggest_avg_time_in_millis"
         }
       },
@@ -137,7 +137,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.warmer.total_time_in_millis}.actual / ${elasticsearch.indices.${1}.warmer.total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.warmer\\.total_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]warmer[.]total_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.warmer.avg_time_in_millis"
         }
       },
@@ -147,7 +147,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.percolate.time_in_millis}.actual / ${elasticsearch.indices.${1}.percolate.total}.actual"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.percolate\\.total_time_in_millis",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]percolate[.]total_time_in_millis",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.percolate.avg_time_in_millis"
         }
       },
@@ -157,7 +157,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.flush.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.flush\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]flush[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.flush.avg_per_sec"
         }
       },
@@ -167,7 +167,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.get.exists_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.get\\.exists_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]get[.]exists_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.exists_avg_per_sec"
         }
       },
@@ -177,7 +177,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.get.missing_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.get\\.missing_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]get[.]missing_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.missing_avg_per_sec"
         }
       },
@@ -187,7 +187,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.get.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.get\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]get[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.get.avg_per_sec"
         }
       },
@@ -197,7 +197,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.indexing.delete_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.delete_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]indexing[.]delete_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.delete_avg_per_sec"
         }
       },
@@ -207,7 +207,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.indexing.index_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.index_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]indexing[.]index_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.index_avg_per_sec"
         }
       },
@@ -217,7 +217,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.indexing.noop_update_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.indexing\\.noop_update_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]indexing[.]noop_update_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.indexing.noop_update_avg_per_sec"
         }
       },
@@ -227,7 +227,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.merges.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.merges\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]merges[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.merges.avg_per_sec"
         }
       },
@@ -237,7 +237,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.percolate.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.percolate\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]percolate[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.percolate.avg_per_sec"
         }
       },
@@ -247,7 +247,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.refresh.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.refresh\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]refresh[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.refresh.avg_per_sec"
         }
       },
@@ -257,7 +257,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.fetch_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.fetch_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]fetch_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.fetch_avg_per_sec"
         }
       },
@@ -267,7 +267,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.query_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.query_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]query_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.query_avg_per_sec"
         }
       },
@@ -277,7 +277,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.search.scroll_total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.search\\.scroll_total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]search[.]scroll_total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.search.scroll_avg_per_sec"
         }
       },
@@ -287,7 +287,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.suggest.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.suggest\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]suggest[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.suggest.avg_per_sec"
         }
       },
@@ -297,7 +297,7 @@
           "expressions": [
             "${elasticsearch.indices.${1}.warmer.total}.actual / 300"
           ],
-          "capture": "elasticsearch\\.indices\\.(.*?)\\.warmer\\.total",
+          "capture": "elasticsearch[.]indices[.](.*?)[.]warmer[.]total",
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.warmer.avg_per_sec"
         }
       }
@@ -305,7 +305,7 @@
     "name": "Elastic Search",
     "scope": {
       "elementType": "SERVER",
-      "metricMatches": "^elasticsearch\\..*"
+      "metricMatches": "^elasticsearch[.].*"
     },
     "type": "COMPUTED_METRIC"
   }
