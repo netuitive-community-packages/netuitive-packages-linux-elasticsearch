@@ -1,37 +1,31 @@
 {
-  "policy" : {
-    "name" : "Linux ElasticSearch - Disk space is more than 75% used on data node",
-    "description" : "The average utilization across your Elastic Search data node storage devices are more than 75%. ",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : null,
-      "elementTypes" : [ "SERVER" ],
-      "elementTags" : {
-        "service" : "elasticsearch-data"
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 75,
+        "metric": "netuitive.linux.diskspace.avg_byte_percentused",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The average utilization across your Elastic Search data node storage devices are more than 75%. ",
+    "duration": 600,
+    "enabled": false,
+    "name": "Linux ElasticSearch - Disk space is more than 75% used on data node",
+    "scope": {
+      "elementTags": {
+        "service": "elasticsearch-data"
       },
-      "elementAttributes" : [ ]
-    },
-    "duration" : 600,
-    "conditions" : [ {
-      "metric" : "netuitive.linux.diskspace.avg_byte_percentused",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 75.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : false,
-    "deleted" : false
+      "elementTypes": [
+        "SERVER"
+      ]
+    }
   }
 }
