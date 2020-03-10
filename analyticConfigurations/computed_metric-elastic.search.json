@@ -307,7 +307,7 @@
           "expressions": [
             "${elasticsearch.jvm.gc.collection.count}.actual / 300.0"
           ],
-          "fqn": "netuitive.linux.elasticsearch.jvm.gccollectionpersecond",
+          "fqn": "netuitive.linux.elasticsearch.jvm.gccollectionspersecond",
           "name": "JVM Collections Per Second"
         }
       }
