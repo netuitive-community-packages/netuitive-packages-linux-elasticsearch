@@ -302,7 +302,7 @@
         }
       },
       {
-        "match": "netuitive.linux.elasticsearch.jvm.gccollectionpersecond",
+        "match": "netuitive.linux.elasticsearch.jvm.gccollectionspersecond",
         "properties": {
           "expressions": [
             "${elasticsearch.jvm.gc.collection.count}.actual / 300.0"
