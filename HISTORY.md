@@ -2,6 +2,10 @@
 
 ### Version next
 
+### Version 1.10.0
+
+* Add computed metric for jvm garbage collection per second.
+
 ### Version 1.9.0
 
 * Convert computed metrics to new format
