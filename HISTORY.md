@@ -1,8 +1,6 @@
 ## Release History
 
-### Version next
-
-### Version 1.10.0
+### Version next:
 
 * Add computed metric for jvm garbage collection per second.
 
