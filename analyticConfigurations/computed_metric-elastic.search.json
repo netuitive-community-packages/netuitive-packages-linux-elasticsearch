@@ -300,6 +300,16 @@
           ],
           "fqn": "netuitive.linux.elasticsearch.indices.${1}.warmer.avg_per_sec"
         }
+      },
+      {
+        "match": "netuitive.linux.elasticsearch.jvm.gccollectionspersecond",
+        "properties": {
+          "expressions": [
+            "${elasticsearch.jvm.gc.collection.count}.actual / 300.0"
+          ],
+          "fqn": "netuitive.linux.elasticsearch.jvm.gccollectionspersecond",
+          "name": "JVM Collections Per Second"
+        }
       }
     ],
     "name": "Elastic Search",
